@@ -2,7 +2,7 @@
 
 - ⚠️ **Don't fork this repository.** Use the "Use this template" green GitHub
   button.
-- Put your bindings in `src/ReactNativeXxxxxxxxxx` & rename accordingly or use
+- Put your bindings in `src/RescriptNativeBase` & rename accordingly or use
   `bsconfig.json` `"namespace"` field (more on this below),
 - Update all occurences of
 
@@ -11,10 +11,10 @@
   - `__template__`
   - `react-native-XXXXXXXXXX`
   - `https://github.com/OWNER/react-native-XXXXXXXXXX`
-  - `ReactNativeXxxxxxxxxx`. If you have more than a file exposed, you should
+  - `RescriptNativeBase`. If you have more than a file exposed, you should
     consider using ReScript custom namespace by adjusting `bsconfig.json`
     and adding a `"namespace": "react-native-something"` (note that it will be
-    converted to `ReactNativeXxxxxxxxxx`)
+    converted to `RescriptNativeBase`)
 
 - Add your `react-native-XXXXXXXXXX` (adjusted) in `peerDependencies`
   & `devDependencies` section
@@ -32,7 +32,7 @@
 [ReScript](https://rescript-lang.org) bindings for
 [`react-native-XXXXXXXXXX`](https://github.com/OWNER/react-native-XXXXXXXXXX).
 
-Exposed as `ReactNativeXxxxxxxxxx` module.
+Exposed as `RescriptNativeBase` module.
 
 `@rescript-react-native/__template__` X.y.\* means it's compatible with
 `react-native-XXXXXXXXXX` X.y.\*
@@ -70,13 +70,13 @@ yarn add @rescript-react-native/__template__
 
 ### Types
 
-#### `ReactNativeXxxxxxxxxx.t`
+#### `RescriptNativeBase.t`
 
 ...
 
 ### Methods
 
-#### `ReactNativeXxxxxxxxxx.method`
+#### `RescriptNativeBase.method`
 
 ...
 

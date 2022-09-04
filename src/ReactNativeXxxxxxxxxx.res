@@ -1,4 +1,6 @@
 type t
 
-@module("react-native-XXXXXXXXXX")
-external method_: unit => unit = "method"
+// @module("rescript-nativebase")
+// external method_: unit => unit = "method"
+let e = <Box margin=2 />
+let a = <div />

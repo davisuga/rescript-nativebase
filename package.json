@@ -1,19 +1,25 @@
 {
-  "name": "@rescript-react-native/__template__",
+  "name": "@davisuga/rescript-nativebase",
   "description": "ReScript bindings for react-native-XXXXXXXXXX",
   "version": "0.0.0",
   "publishConfig": {
     "access": "public"
   },
-  "peerDependencies": {},
+  "peerDependencies": {
+    "@rescript/react": ">=0.10.0",
+    "native-base": "^3.4.13",
+    "rescript-react-native": ">=0.68.0"
+  },
   "overrides": {
     "react": "17.0.2"
   },
-  "repository": "https://github.com/rescript-react-native/__template__.git",
+  "repository": "https://github.com/davisuga/rescript-nativebase.git",
   "license": "MIT",
   "keywords": [
     "rescript",
-    "react-native"
+    "react-native",
+    "react",
+    "nativebase"
   ],
   "files": [
     "*.md",
@@ -36,11 +42,14 @@
     "release": "npmpub"
   },
   "devDependencies": {
-    "rescript": "^9.1.4",
+    "@greenlabs/ppx-ts": "^0.1.6",
+    "@types/react": "^18.0.18",
+    "@types/react-native": "^0.69.6",
     "husky": "^4.0.0",
     "lint-staged": "^10.0.0",
     "npmpub": "^5.0.0",
-    "prettier": "^2.0.0"
+    "prettier": "^2.0.0",
+    "rescript": "10"
   },
   "prettier": {
     "trailingComma": "all"
@@ -53,5 +62,10 @@
     "hooks": {
       "pre-commit": "lint-staged"
     }
+  },
+  "dependencies": {
+    "@rescript/react": "^0.10.3",
+    "native-base": "^3.4.13",
+    "rescript-react-native": "^0.68.1"
   }
 }

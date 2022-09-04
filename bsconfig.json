@@ -1,5 +1,5 @@
 {
-  "name": "@rescript-react-native/__template__",
+  "name": "rescript-nativebase",
   "reason": { "react-jsx": 3 },
   "package-specs": {
     "module": "commonjs",
@@ -16,5 +16,6 @@
   "warnings": {
     "error": true
   },
-  "bs-dependencies": []
+  "ppx-flags": ["@greenlabs/ppx-ts/ppx"],
+  "bs-dependencies": ["@rescript/react", "rescript-react-native"]
 }
