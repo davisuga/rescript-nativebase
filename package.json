@@ -39,17 +39,37 @@
     "start": "npm run re:start",
     "build": "npm run re:build",
     "test": "npm run re:clean-build",
-    "release": "npmpub"
+    "release": "npmpub",
+    "storybook": "start-storybook -p 6006",
+    "build-storybook": "build-storybook"
   },
   "devDependencies": {
+    "@babel/core": "^7.18.13",
     "@greenlabs/ppx-ts": "^0.1.6",
+    "@storybook/addon-actions": "^6.5.10",
+    "@storybook/addon-essentials": "^6.5.10",
+    "@storybook/addon-interactions": "^6.5.10",
+    "@storybook/addon-links": "^6.5.10",
+    "@storybook/builder-vite": "^0.2.2",
+    "@storybook/builder-webpack5": "^6.5.10",
+    "@storybook/manager-webpack5": "^6.5.10",
+    "@storybook/react": "^6.5.10",
+    "@storybook/testing-library": "^0.0.13",
     "@types/react": "^18.0.18",
     "@types/react-native": "^0.69.6",
+    "babel-loader": "^8.2.5",
     "husky": "^4.0.0",
     "lint-staged": "^10.0.0",
     "npmpub": "^5.0.0",
     "prettier": "^2.0.0",
-    "rescript": "10"
+    "react-native-safe-area-context": "3.3.2",
+    "react-native-svg": "12.1.1",
+    "react-native-web": "0.17.1",
+    "rescript": "10",
+    "reshowcase": "^5.2.0",
+    "storybook-addon-swc": "^1.1.8",
+    "typescript": "^4.8.2",
+    "vite": "^3.1.0"
   },
   "prettier": {
     "trailingComma": "all"
@@ -65,7 +85,10 @@
   },
   "dependencies": {
     "@rescript/react": "^0.10.3",
+    "@storybook/addon-react-native-web": "^0.0.18",
     "native-base": "^3.4.13",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
     "rescript-react-native": "^0.68.1"
   }
 }
