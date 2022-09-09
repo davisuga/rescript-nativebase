@@ -7,8 +7,22 @@ import { make as Component } from "./src/Component.bs";
 export default function App() {
   return (
     <NativeBaseProvider>
-      <NativeBase.Box h="20" w="20" background="primary.400" />
       <Component />
+      <NativeBase.Box
+        mt="10"
+        h="20"
+        w="20"
+        justifyContent="center"
+        alignItems="center"
+        background="primary.700"
+      >
+        <NativeBase.Text fontWeight="bold" color="black">
+          Hey
+        </NativeBase.Text>
+        <NativeBase.Button size={""} onPress={(e) => {}}>
+          Hey
+        </NativeBase.Button>
+      </NativeBase.Box>
     </NativeBaseProvider>
   );
 }

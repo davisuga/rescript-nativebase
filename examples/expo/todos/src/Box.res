@@ -121,7 +121,13 @@ module Binding = {
     ~bottom: string=?,
     ~left: string=?,
     ~shadow: string=?,
-    ~children: React.element,
-  ) => React.element = "Text"
+    // React props
+    ~children: React.element=?,
+    ~style: ReactNative.Style.t=?,
+    // Platform props
+    ~_ios: Utilitary.props=?,
+    ~_android: Utilitary.props=?,
+    ~_web: Utilitary.props=?,
+  ) => React.element = "Box"
 }
 include Binding

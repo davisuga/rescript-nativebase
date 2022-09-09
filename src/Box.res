@@ -121,7 +121,7 @@ module Binding = {
     ~bottom: string=?,
     ~left: string=?,
     ~shadow: string=?,
-    ~children: React.element,
-  ) => React.element = "Text"
+    ~children: React.element=?,
+  ) => React.element = "Box"
 }
 include Binding

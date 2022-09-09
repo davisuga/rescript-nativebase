@@ -1,6 +1,12 @@
 module Binding = {
+  open ReactNative
+
   @module("native-base") @react.component
   external make: (
+    //NativeBase button props
+    ~size: [#lg | #md | #sm | #xs]=?,
+    ~variant: [#ghost | #outline | #solid | #subtle | #link | #unstyled]=?,
+    // Utilitary props
     ~m: string=?,
     ~margin: string=?,
     ~mt: string=?,
@@ -121,6 +127,31 @@ module Binding = {
     ~bottom: string=?,
     ~left: string=?,
     ~shadow: string=?,
-  ) => React.element = "Box"
+    // React props
+    ~children: React.element=?,
+    ~style: ReactNative.Style.t=?,
+    // RN Button Options
+    ~accessibilityActions: array<Accessibility.actionInfo>=?,
+    ~accessibilityLabel: string=?,
+    ~accessibilityState: Accessibility.state=?,
+    ~accessible: bool=?,
+    ~color: Color.t=?,
+    ~disabled: bool=?,
+    ~hasTVPreferredFocus: bool=?,
+    ~nextFocusDown: int=?,
+    ~nextFocusForward: int=?,
+    ~nextFocusLeft: int=?,
+    ~nextFocusRight: int=?,
+    ~nextFocusUp: int=?,
+    ~onAccessibilityAction: Accessibility.actionEvent => unit=?,
+    ~onPress: Event.pressEvent => unit,
+    ~testID: string=?,
+    ~title: string,
+    ~touchSoundDisabled: bool=?,
+    // Platform props
+    ~_ios: Utilitary.props=?,
+    ~_android: Utilitary.props=?,
+    ~_web: Utilitary.props=?,
+  ) => React.element = "Button"
 }
 include Binding

@@ -1,4 +1,3 @@
-@deriving(abstract)
 type props = {
   @optional
   m: string,

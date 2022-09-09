@@ -10,14 +10,17 @@
     "re:start": "rescript build -w"
   },
   "dependencies": {
+    "@davesnx/styled-ppx": "^0.31.2",
     "@expo/webpack-config": "^0.17.0",
     "expo": "~46.0.9",
     "expo-status-bar": "~1.4.0",
     "native-base": "^3.4.13",
     "react": "18.0.0",
+    "react-dom": "18.0.0",
     "react-native": "0.69.5",
     "react-native-safe-area-context": "4.3.1",
-    "react-native-svg": "12.3.0"
+    "react-native-svg": "12.3.0",
+    "react-native-web": "~0.18.7"
   },
   "devDependencies": {
     "@babel/core": "^7.12.9",
