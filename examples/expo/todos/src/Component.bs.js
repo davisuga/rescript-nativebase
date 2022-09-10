@@ -15,15 +15,17 @@ function Component(Props) {
               h: "20",
               alignItems: "center",
               justifyContent: "center",
-              children: React.createElement(NativeBase.Text, {
-                    color: "black",
-                    fontWeight: "bold",
-                    children: "Hey"
-                  }),
+              children: null,
               _android: {
                 m: "3"
               }
-            });
+            }, React.createElement(NativeBase.Text, {
+                  color: "black",
+                  fontWeight: "bold",
+                  children: "Hey"
+                }), React.createElement(NativeBase.Input, {
+                  size: "xl"
+                }));
 }
 
 var make = Component;

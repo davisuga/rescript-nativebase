@@ -249,3 +249,41 @@ type platformProps = {
   @optional
   _web: props,
 }
+
+type colorScheme = [
+  | #rose
+  | #pink
+  | #fuchsia
+  | #purple
+  | #violet
+  | #indigo
+  | #blue
+  | #lightBlue
+  | #darkBlue
+  | #cyan
+  | #teal
+  | #emerald
+  | #green
+  | #lime
+  | #yellow
+  | #amber
+  | #orange
+  | #red
+  | #warmGray
+  | #trueGray
+  | #gray
+  | #coolGray
+  | #blueGray
+  | #dark
+  | #text
+  | #danger
+  | #error
+  | #success
+  | #warning
+  | #muted
+  | #primary
+  | #info
+  | #secondary
+  | #light
+  | #tertiary
+]

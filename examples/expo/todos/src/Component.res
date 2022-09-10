@@ -12,4 +12,5 @@ let make = () =>
     background="primary.700">
     // <ReactNative.Text> {"Hey"->s} </ReactNative.Text>
     <Text fontWeight="bold" color="black"> {"Hey"->s} </Text>
+    <Input size=#xl />
   </Box>

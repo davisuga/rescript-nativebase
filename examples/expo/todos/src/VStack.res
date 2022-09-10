@@ -1,6 +1,7 @@
 module Binding = {
   @module("native-base") @react.component
   external make: (
+    ~space: int=?,
     ~m: string=?,
     ~margin: string=?,
     ~mt: string=?,
@@ -121,11 +122,13 @@ module Binding = {
     ~bottom: string=?,
     ~left: string=?,
     ~shadow: string=?,
-    ~children: React.element,
+    // React props
+    ~children: React.element=?,
+    ~style: ReactNative.Style.t=?,
     // Platform props
     ~_ios: Utilitary.props=?,
     ~_android: Utilitary.props=?,
     ~_web: Utilitary.props=?,
-  ) => React.element = "Text"
+  ) => React.element = "VStack"
 }
 include Binding

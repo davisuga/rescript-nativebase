@@ -16,13 +16,12 @@ export default function App() {
         alignItems="center"
         background="primary.700"
       >
-        <NativeBase.Text fontWeight="bold" color="black">
+        <NativeBase.Text size="" fontWeight="bold" color="black">
           Hey
         </NativeBase.Text>
-        <NativeBase.Button size={""} onPress={(e) => {}}>
-          Hey
-        </NativeBase.Button>
+        <NativeBase.IconButton colorScheme={""} size={""} onPress={(e) => {}} />
       </NativeBase.Box>
+      {/* <NativeBase.Input variant={["filled", "rounded"]} ></NativeBase.Input> */}
     </NativeBaseProvider>
   );
 }
