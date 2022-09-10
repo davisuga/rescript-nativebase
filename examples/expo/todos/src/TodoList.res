@@ -10,7 +10,7 @@ module TodoEl = {
     <HStack w="100%" justifyContent="space-between" alignItems="center">
       <Checkbox
         isChecked={item.isCompleted} onChange={_ => handleStatusChange(itemI)} value={item.content}>
-        {"Todo"->s}
+        {""->s}
       </Checkbox>
       <Text
         width="100%"
@@ -31,7 +31,7 @@ module TodoEl = {
         size=#sm
         colorScheme=#trueGray
         icon={<Icon
-          name="plus" size=#md color="warmGray.50" \"as"=Icon.MaterialCommunityIcons.make
+          name="minus" size=#md color="warmGray.50" \"as"=Icon.MaterialCommunityIcons.make
         />}
         onPress={_ => handleDelete(itemI)}
       />
@@ -44,7 +44,7 @@ let make = () => {
   let (items, setItems) = React.useState(_ => list{})
 
   let handleDelete = index =>
-    Belt.List.keepWithIndex(items, (_a, i) => i == index)->(l => setItems(_ => l))
+    Belt.List.keepWithIndex(items, (_t, i) => i != index)->(l => setItems(_ => l))
 
   let handleStatusChange = index => {
     List.mapi((itemIndex, item) =>
@@ -57,7 +57,7 @@ let make = () => {
     ->Belt.List.toArray
     ->React.array
 
-  <Center flex="1" px="3">
+  <Center flex="1" px="3" bg="gray.900">
     <Box w="80%">
       <Heading mb="2" size=#md> {"Wednesday"->s} </Heading>
       <VStack space=4>
