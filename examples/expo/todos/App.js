@@ -6,10 +6,16 @@ import React from "react";
 import { Feather, Entypo, MaterialCommunityIcons } from "@expo/vector-icons";
 import { make as Component } from "./src/Component.bs";
 import { make as TodoList } from "./src/TodoList.bs";
-
+// Define the config
+const config = {
+  useSystemColorMode: false,
+  initialColorMode: "dark",
+};
 export default function App() {
+  const customTheme = NativeBase.extendTheme({ config });
+
   return (
-    <NativeBaseProvider>
+    <NativeBaseProvider theme={customTheme}>
       <TodoList />
       {/* <NativeBase.Box
         mt="10"
@@ -44,7 +50,10 @@ export default function App() {
       /> */}
       {/* <NativeBase.Checkbox  size=""  /> */}
 
-      {/* <NativeBase.Input variant={["filled", "rounded"]} ></NativeBase.Input> */}
+      {/* <NativeBase.Input
+        bg="gray.900"
+        variant={["filled", "rounded"]}
+      ></NativeBase.Input> */}
     </NativeBaseProvider>
   );
 }
