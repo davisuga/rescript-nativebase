@@ -6,7 +6,8 @@ module Binding = {
     ~underline: bool=?,
     ~itallic: bool=?,
     ~highlighted: bool=?,
-    ~strikeThrought: bool=?,
+    ~strikeThrough: bool=?,
+    ~onPress: ReactNative.Event.pressEvent => unit=?,
     ~m: string=?,
     ~margin: string=?,
     ~mt: string=?,
@@ -132,6 +133,8 @@ module Binding = {
     ~_ios: Utilitary.props=?,
     ~_android: Utilitary.props=?,
     ~_web: Utilitary.props=?,
+    ~_light: Utilitary.props=?,
+    ~_dark: Utilitary.props=?,
   ) => React.element = "Text"
 }
 include Binding

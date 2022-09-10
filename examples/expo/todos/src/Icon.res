@@ -1,3 +1,14 @@
+// Copied from rescript-expo because the package is not working with rescript 10
+module MaterialCommunityIcons = {
+  @module("@expo/vector-icons") @react.component
+  external make: (
+    ~style: ReactNative.Style.t=?,
+    ~name: string,
+    ~size: int,
+    ~color: string,
+  ) => React.element = "MaterialCommunityIcons"
+}
+
 module Binding = {
   @module("native-base") @react.component
   external make: (
@@ -6,6 +17,7 @@ module Binding = {
       {"color": string, "name": string, "size": int, "style": option<ReactNative.Style.t>},
       React.element,
     >=?,
+    ~size: [#sm | #md]=?,
     ~name: string=?,
     ~m: string=?,
     ~margin: string=?,

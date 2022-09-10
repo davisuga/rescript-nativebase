@@ -183,7 +183,7 @@ module Binding = {
     ~onAccessibilityAction: Accessibility.actionEvent => unit=?,
     ~onPress: Event.pressEvent => unit,
     ~testID: string=?,
-    ~title: string,
+    ~title: string=?,
     ~touchSoundDisabled: bool=?,
     // Platform props
     ~_ios: Utilitary.props=?,

@@ -7,5 +7,6 @@ let make = () =>
     // <ReactNative.Text> {"Hey"->s} </ReactNative.Text>
     <Text fontWeight="bold" mt="10" color="black"> {"Hey"->s} </Text>
     <Input size=#xl />
-    <Icon name="plus" \"as"=Expo.VectorIcons.MaterialCommunityIcons.make />
+    <Icon name="home" color="primary" \"as"=Icon.MaterialCommunityIcons.make />
+    <Checkbox value="true" />
   </Box>

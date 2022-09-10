@@ -4,7 +4,7 @@ module Binding = {
   @module("native-base") @react.component
   external make: (
     //NativeBase input props
-
+    ~isChecked: bool=?,
     ~size: [#lg | #md | #sm]=?,
     ~variant: [#filled | #outline | #rounded | #underlined | #unstyled]=?,
     // Utilitary props
