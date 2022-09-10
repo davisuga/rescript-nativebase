@@ -3,9 +3,9 @@ module Binding = {
 
   @module("native-base") @react.component
   external make: (
-    //NativeBase button props
-    ~size: [#lg | #md | #sm | #xs]=?,
-    ~variant: [#ghost | #outline | #solid | #subtle | #link | #unstyled]=?,
+    //NativeBase icon props
+    ~size: [#lg | #md | #sm | #xs | #xl | #"2xl" | #"3xl" | #"4xl" | #"5xl" | #"6xl"]=?,
+    ~name: string=?,
     // Utilitary props
     ~m: string=?,
     ~margin: string=?,
