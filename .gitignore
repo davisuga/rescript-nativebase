@@ -12,3 +12,4 @@ node_modules
 **/lib/bs
 **/lib/ocaml
 **/.merlin
+**/src/*.js
