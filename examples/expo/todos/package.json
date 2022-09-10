@@ -12,6 +12,7 @@
   "dependencies": {
     "@davesnx/styled-ppx": "^0.31.2",
     "@expo/webpack-config": "^0.17.0",
+    "@rescript-bindings/expo": "^40.3.2",
     "expo": "~46.0.9",
     "expo-status-bar": "~1.4.0",
     "native-base": "^3.4.13",

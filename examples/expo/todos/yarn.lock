@@ -2644,6 +2644,11 @@
   dependencies:
     "@react-types/shared" "^3.14.1"
 
+"@rescript-bindings/expo@^40.3.2":
+  version "40.3.2"
+  resolved "https://registry.yarnpkg.com/@rescript-bindings/expo/-/expo-40.3.2.tgz#2a89c78ea91a551bce423d6fbae61bc1ad07d313"
+  integrity sha512-8E1DOx4FshA9OnUyXubx1ZQGmm7cUVCIRwZ6IEL73ftsg8AjtOEDUS7q5bwxTRLXADcSe8YKGwyPcq0e7PSAJA==
+
 "@rescript/react@^0.10.3":
   version "0.10.3"
   resolved "https://registry.yarnpkg.com/@rescript/react/-/react-0.10.3.tgz#a2a8bed6b017940ec26c2154764b350f50348889"

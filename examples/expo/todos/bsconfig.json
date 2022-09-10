@@ -13,7 +13,11 @@
     }
   ],
   "suffix": ".bs.js",
-  "bs-dependencies": ["@rescript/react", "rescript-react-native"],
+  "bs-dependencies": [
+    "@rescript/react",
+    "rescript-react-native",
+    "@rescript-bindings/expo"
+  ],
   "ppx-flags": ["@davesnx/styled-ppx/ppx"],
   "reason": {
     "react-jsx": 3
