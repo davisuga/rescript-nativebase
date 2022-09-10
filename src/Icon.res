@@ -1,13 +1,24 @@
+// Copied from rescript-expo because the package is not working with rescript 10
+module MaterialCommunityIcons = {
+  @module("@expo/vector-icons") @react.component
+  external make: (
+    ~style: ReactNative.Style.t=?,
+    ~name: string,
+    ~size: int,
+    ~color: string,
+  ) => React.element = "MaterialCommunityIcons"
+}
+
 module Binding = {
   @module("native-base") @react.component
   external make: (
-    ~sub: bool=?,
-    ~bold: bool=?,
-    ~underline: bool=?,
-    ~itallic: bool=?,
-    ~highlighted: bool=?,
-    ~strikeThrough: bool=?,
-    ~onPress: ReactNative.Event.pressEvent => unit=?,
+    // this 'a is a temporary type hack to make the compiler happy
+    ~\"as": React.componentLike<
+      {"color": string, "name": string, "size": int, "style": option<ReactNative.Style.t>},
+      React.element,
+    >=?,
+    ~size: [#sm | #md]=?,
+    ~name: string=?,
     ~m: string=?,
     ~margin: string=?,
     ~mt: string=?,
@@ -128,13 +139,15 @@ module Binding = {
     ~bottom: string=?,
     ~left: string=?,
     ~shadow: string=?,
-    ~children: React.element,
+    // React props
+    ~children: React.element=?,
+    ~style: ReactNative.Style.t=?,
     // Platform props
     ~_ios: Utilitary.props=?,
     ~_android: Utilitary.props=?,
     ~_web: Utilitary.props=?,
-    ~_light: Utilitary.props=?,
-    ~_dark: Utilitary.props=?,
-  ) => React.element = "Text"
+  ) => React.element = "Icon"
+
+  // let makeProps = makeProps(~asEl=Expo.VectorIcons.MaterialIcons.makeProps);
 }
 include Binding

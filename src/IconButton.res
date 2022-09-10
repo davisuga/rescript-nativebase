@@ -1,13 +1,50 @@
 module Binding = {
+  open ReactNative
+
   @module("native-base") @react.component
   external make: (
-    ~sub: bool=?,
-    ~bold: bool=?,
-    ~underline: bool=?,
-    ~itallic: bool=?,
-    ~highlighted: bool=?,
-    ~strikeThrough: bool=?,
-    ~onPress: ReactNative.Event.pressEvent => unit=?,
+    //NativeBase props
+    ~size: [#lg | #md | #sm | #xs]=?,
+    ~colorScheme: [
+      | #rose
+      | #pink
+      | #fuchsia
+      | #purple
+      | #violet
+      | #indigo
+      | #blue
+      | #lightBlue
+      | #darkBlue
+      | #cyan
+      | #teal
+      | #emerald
+      | #green
+      | #lime
+      | #yellow
+      | #amber
+      | #orange
+      | #red
+      | #warmGray
+      | #trueGray
+      | #gray
+      | #coolGray
+      | #blueGray
+      | #dark
+      | #text
+      | #danger
+      | #error
+      | #success
+      | #warning
+      | #muted
+      | #primary
+      | #info
+      | #secondary
+      | #light
+      | #tertiary
+    ]=?,
+    ~icon: React.element=?,
+    ~variant: [#ghost | #outline | #solid | #subtle | #link | #unstyled]=?,
+    // Utilitary props
     ~m: string=?,
     ~margin: string=?,
     ~mt: string=?,
@@ -128,13 +165,30 @@ module Binding = {
     ~bottom: string=?,
     ~left: string=?,
     ~shadow: string=?,
-    ~children: React.element,
+    // React props
+    ~style: ReactNative.Style.t=?,
+    // RN Button Options
+    ~accessibilityActions: array<Accessibility.actionInfo>=?,
+    ~accessibilityLabel: string=?,
+    ~accessibilityState: Accessibility.state=?,
+    ~accessible: bool=?,
+    ~color: Color.t=?,
+    ~disabled: bool=?,
+    ~hasTVPreferredFocus: bool=?,
+    ~nextFocusDown: int=?,
+    ~nextFocusForward: int=?,
+    ~nextFocusLeft: int=?,
+    ~nextFocusRight: int=?,
+    ~nextFocusUp: int=?,
+    ~onAccessibilityAction: Accessibility.actionEvent => unit=?,
+    ~onPress: Event.pressEvent => unit,
+    ~testID: string=?,
+    ~title: string=?,
+    ~touchSoundDisabled: bool=?,
     // Platform props
     ~_ios: Utilitary.props=?,
     ~_android: Utilitary.props=?,
     ~_web: Utilitary.props=?,
-    ~_light: Utilitary.props=?,
-    ~_dark: Utilitary.props=?,
-  ) => React.element = "Text"
+  ) => React.element = "IconButton"
 }
 include Binding

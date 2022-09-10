@@ -1,13 +1,7 @@
 module Binding = {
   @module("native-base") @react.component
   external make: (
-    ~sub: bool=?,
-    ~bold: bool=?,
-    ~underline: bool=?,
-    ~itallic: bool=?,
-    ~highlighted: bool=?,
-    ~strikeThrough: bool=?,
-    ~onPress: ReactNative.Event.pressEvent => unit=?,
+    ~space: int=?,
     ~m: string=?,
     ~margin: string=?,
     ~mt: string=?,
@@ -128,13 +122,13 @@ module Binding = {
     ~bottom: string=?,
     ~left: string=?,
     ~shadow: string=?,
-    ~children: React.element,
+    // React props
+    ~children: React.element=?,
+    ~style: ReactNative.Style.t=?,
     // Platform props
     ~_ios: Utilitary.props=?,
     ~_android: Utilitary.props=?,
     ~_web: Utilitary.props=?,
-    ~_light: Utilitary.props=?,
-    ~_dark: Utilitary.props=?,
-  ) => React.element = "Text"
+  ) => React.element = "HStack"
 }
 include Binding

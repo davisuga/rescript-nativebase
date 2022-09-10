@@ -1,6 +1,6 @@
 {
   "name": "@davisuga/rescript-nativebase",
-  "description": "ReScript bindings for react-native-XXXXXXXXXX",
+  "description": "ReScript bindings for native base",
   "version": "0.0.0",
   "publishConfig": {
     "access": "public"

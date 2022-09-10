@@ -14,7 +14,7 @@
   ],
   "bsc-flags": ["-bs-no-version-header"],
   "warnings": {
-    "error": true
+    "error": false
   },
   "ppx-flags": ["@greenlabs/ppx-ts/ppx"],
   "bs-dependencies": ["@rescript/react", "rescript-react-native"]

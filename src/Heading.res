@@ -1,13 +1,13 @@
 module Binding = {
   @module("native-base") @react.component
   external make: (
+    ~size: [#sm | #md | #lg | #xl | #"2xl" | #"2xs" | #xs]=?,
     ~sub: bool=?,
     ~bold: bool=?,
     ~underline: bool=?,
     ~itallic: bool=?,
     ~highlighted: bool=?,
-    ~strikeThrough: bool=?,
-    ~onPress: ReactNative.Event.pressEvent => unit=?,
+    ~strikeThrought: bool=?,
     ~m: string=?,
     ~margin: string=?,
     ~mt: string=?,
@@ -133,8 +133,6 @@ module Binding = {
     ~_ios: Utilitary.props=?,
     ~_android: Utilitary.props=?,
     ~_web: Utilitary.props=?,
-    ~_light: Utilitary.props=?,
-    ~_dark: Utilitary.props=?,
-  ) => React.element = "Text"
+  ) => React.element = "Heading"
 }
 include Binding
