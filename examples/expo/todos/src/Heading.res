@@ -132,6 +132,6 @@ module Binding = {
     ~_ios: Utilitary.props=?,
     ~_android: Utilitary.props=?,
     ~_web: Utilitary.props=?,
-  ) => React.element = "Text"
+  ) => React.element = "Heading"
 }
 include Binding
