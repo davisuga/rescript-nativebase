@@ -9,13 +9,13 @@
   "sources": [
     {
       "dir": "src",
-      "subdirs": false
+      "subdirs": true
     }
   ],
   "bsc-flags": ["-bs-no-version-header"],
   "warnings": {
     "error": false
   },
-  "ppx-flags": ["@greenlabs/ppx-ts/ppx"],
+  "ppx-flags": [],
   "bs-dependencies": ["@rescript/react", "rescript-react-native"]
 }

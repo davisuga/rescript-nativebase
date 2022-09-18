@@ -192,3 +192,4 @@ module Binding = {
   ) => React.element = "IconButton"
 }
 include Binding
+open CssJs

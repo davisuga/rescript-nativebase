@@ -16,9 +16,10 @@
   "bs-dependencies": [
     "@rescript/react",
     "rescript-react-native",
-    "@rescript-bindings/expo"
+    "bs-css",
+    "bs-css-emotion"
   ],
-  "ppx-flags": ["@davesnx/styled-ppx/ppx"],
+  "ppx-flags": [],
   "reason": {
     "react-jsx": 3
   }
