@@ -1,6 +1,6 @@
 type themeOpts = {
-  useSystemColorMode: bool,
-  initialColorMode: [#dark | #light],
+  useSystemColorMode?: bool,
+  initialColorMode?: [#dark | #light],
 }
 
 type t

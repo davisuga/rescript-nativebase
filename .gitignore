@@ -13,3 +13,8 @@ node_modules
 **/lib/ocaml
 **/.merlin
 **/src/*.js
+typescript/**
+
+**/.fake
+**/obj
+**/bin

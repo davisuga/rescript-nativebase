@@ -11,6 +11,7 @@ const config = {
   useSystemColorMode: false,
   initialColorMode: "dark",
 };
+
 export default function App() {
   const customTheme = NativeBase.extendTheme({ config });
 
