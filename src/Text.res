@@ -1,6 +1,8 @@
 module Binding = {
   @module("native-base") @react.component
   external make: (
+    ~isTruncated: bool=?,
+    ~noOfLines: list<string>=?,
     ~sub: bool=?,
     ~bold: bool=?,
     ~underline: bool=?,
@@ -8,6 +10,7 @@ module Binding = {
     ~highlighted: bool=?,
     ~strikeThrough: bool=?,
     ~onPress: ReactNative.Event.pressEvent => unit=?,
+    // Styled props
     ~m: string=?,
     ~margin: string=?,
     ~mt: string=?,

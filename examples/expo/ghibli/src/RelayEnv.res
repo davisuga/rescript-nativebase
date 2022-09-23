@@ -15,7 +15,7 @@ let fetchQuery: RescriptRelay.Network.fetchFunctionPromise = (
 ) => {
   open Fetch
   fetchWithInit(
-    "http://localhost:4000/graphql",
+    "https://ghibliql.herokuapp.com",
     RequestInit.make(
       ~method_=Post,
       ~body=Js.Dict.fromList(list{
