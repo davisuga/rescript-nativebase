@@ -208,6 +208,6 @@ type breakpoints = {
 }
 
 type t
-type baseTheme = {config: themeOpts, sizes: sizes, space: space, colors: colors}
+type baseTheme = {config?: themeOpts, sizes?: sizes, space?: space, colors?: colors}
 @module("native-base")
 external extendTheme: baseTheme => t = "extendTheme"
