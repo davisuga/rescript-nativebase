@@ -44,7 +44,9 @@ yarn add rescript-nativebase
 ## Usage
 
 At the moment, please read the [NativeBase documentation](https://nativebase.io/).
-Most props map to float, int, or a polymorphic variant (like #xs, #lg, etc)
+Most props map to float, int, or a polymorphic variant (like #xs, #lg, etc).
+
+Please check the examples folder for a simple movie list and a todo app.
 
 ---
 
