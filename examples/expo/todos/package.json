@@ -10,11 +10,7 @@
     "re:start": "rescript build -w"
   },
   "dependencies": {
-    "@ahrefs/bs-emotion": "^2.0.0",
-    "@ahrefs/bs-emotion-ppx": "^3.0.0",
-    "@davesnx/styled-ppx": "^0.31.2",
     "@expo/webpack-config": "^0.17.0",
-    "@rescript-bindings/expo": "^40.3.2",
     "expo": "~46.0.9",
     "expo-status-bar": "~1.4.0",
     "native-base": "^3.4.13",
@@ -28,9 +24,10 @@
   "devDependencies": {
     "@babel/core": "^7.12.9",
     "@rescript/react": "^0.10.3",
-    "bs-css-emotion": "^4.3.0",
     "rescript": "10",
-    "rescript-react-native": "^0.68.1"
+    "rescript-react-native": "^0.68.1",
+    "@rescript-bindings/expo": "^40.3.2"
+    
   },
   "private": true
 }
