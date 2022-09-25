@@ -1,18 +1,18 @@
 type supportedTransitions = {
-  "opacity": integer,
-  "translateY": integer,
-  "translateX": integer,
-  "scale": integer,
-  "scaleX": integer,
-  "scaleY": integer,
+  "opacity": int,
+  "translateY": int,
+  "translateX": int,
+  "scale": int,
+  "scaleX": int,
+  "scaleY": int,
   "rotate": string,
 }
 
-type xy = {x: integer, y: integer}
+type xy = {x: int, y: int}
 type transition = {
   "type": [#timing | #spring],
   "easing": float => float,
-  "overshootClamping": boolean,
+  "overshootClamping": bool,
   "restDisplacementThreshold": float,
   "restSpeedThreshold": float,
   "velocity": [#just(float) | #xy(xy)],
@@ -25,6 +25,6 @@ type transition = {
   "damping": float,
   "delay": float,
   "duration": float,
-  "useNativeDriver": boolean,
+  "useNativeDriver": bool,
 }
 type transitionStyleProps = {...supportedTransitions, "transition": transition}

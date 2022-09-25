@@ -1,7 +1,7 @@
 module Binding = {
   @module("native-base") @react.component
   external make: (
-    ~safeArea: boolean=?,
+    ~safeArea: bool=?,
     //
     ~m: string=?,
     ~margin: string=?,

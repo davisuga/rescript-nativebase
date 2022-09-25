@@ -6,9 +6,13 @@ const foldChild =
   (src: ts.SourceFile) => {
     let acc = initial;
     ts.forEachChild(src, (node) => {
-      acc = sum(acc, node);
+      try {
+        acc = sum(acc, node);
+        return acc;
+      } catch (error) {
+        return acc;
+      }
     });
-    return acc;
   };
 function watch(rootFileNames: string[], options: ts.CompilerOptions) {
   const files: ts.MapLike<{ version: number }> = {};
@@ -75,11 +79,53 @@ function watch(rootFileNames: string[], options: ts.CompilerOptions) {
     const files = program.getSourceFiles();
     const files2 = [program.getSourceFile("./infercomponents.ts")];
     // console.log(files, files2);
+    let r: Record<string, string[]> = {};
     const components = files
       .filter((fn) => fn.fileName.includes("inferer"))
       .map((sourceFile) => {
-        console.log("sourceFile", sourceFile.fileName);
+        ts.forEachChild(sourceFile, (tsNode) => {
+          const text = tsNode.getText();
+          const compName = text?.replace("f.", "")?.replace?.(/\./g, "");
+          if (!compName) return;
+          if (!text.endsWith(".")) return;
+          try {
+            const suggestions = [
+              ...(services.getCompletionsAtPosition(
+                fileName,
+                tsNode.getEnd(),
+                {},
+              ).entries || []),
+            ].map((e) => e.name);
+            // console.log("tsNode", /);
+            console.log(compName);
+            r[compName] = suggestions;
+            // console.log(tsNode.getText(), suggestions);
+          } catch (error) {
+            console.error("Failed to autocomplete ", compName);
+            // console.error(error);
+          }
+          // .map();
+
+          // const nodeTyp = tc.getTypeAtLocation(tsNode);
+          // // console.log("nodeTyp", nodeTyp);
+          // printType(tc, nodeTyp, tsNode);
+          // const symbols = tc.getTypeAtLocation(tsNode).getProperties();
+          // console.log("symbols", symbols);
+          // if (!symbols.length) return;
+          // // console.log(tsNode);
+
+          // symbols.map((a) => console.log(a.escapedName));
+          // symbols.map((symbol) => {
+          //   if (symbol.escapedName[0] === "Input") {
+          //     console.log("name: ", symbol.escapedName);
+          //     const typ = tc.getTypeOfSymbolAtLocation(symbol, tsNode);
+          //     printType(tc, typ, tsNode);
+          //   }
+          // });
+        });
+        // console.log("sourceFile", sourceFile.fileName);
         // Walk the tree to search for classes
+
         return foldChild<string[]>((acc, tsNode) => {
           const text = tsNode.getText();
           if (!text.endsWith(".")) return acc;
@@ -88,56 +134,43 @@ function watch(rootFileNames: string[], options: ts.CompilerOptions) {
           return [
             ...acc,
             ...[
-              ...services.getCompletionsAtPosition(
+              ...(services.getCompletionsAtPosition(
                 fileName,
                 tsNode.getEnd(),
                 {},
-              ).entries,
+              ).entries || []),
             ].map((e) => e.name),
           ];
           // }
         })([])(sourceFile);
-
-        // ts.forEachChild(sourceFile, (tsNode) => {
-        //   const text = tsNode.getText();
-        //   if (!text.endsWith(".")) return;
-
-        //   if (sourceFile.fileName === "infer-components.ts") {
-        //   }
-        //   // console.log("tsNode", /);
-
-        //   console.log(
-        //     tsNode.getText(),
-        //     [
-        //       ...services.getCompletionsAtPosition(
-        //         fileName,
-        //         tsNode.getEnd(),
-        //         {},
-        //       ).entries,
-        //     ].map((e) => e.name),
-        //   );
-        //   // .map();
-
-        //   // const nodeTyp = tc.getTypeAtLocation(tsNode);
-        //   // // console.log("nodeTyp", nodeTyp);
-        //   // printType(tc, nodeTyp, tsNode);
-        //   // const symbols = tc.getTypeAtLocation(tsNode).getProperties();
-        //   // console.log("symbols", symbols);
-        //   // if (!symbols.length) return;
-        //   // // console.log(tsNode);
-
-        //   // symbols.map((a) => console.log(a.escapedName));
-        //   // symbols.map((symbol) => {
-        //   //   if (symbol.escapedName[0] === "Input") {
-        //   //     console.log("name: ", symbol.escapedName);
-        //   //     const typ = tc.getTypeOfSymbolAtLocation(symbol, tsNode);
-        //   //     printType(tc, typ, tsNode);
-        //   //   }
-        //   // });
-        // });
       });
     console.log(...components);
     // components.map((c) => {});
+    const isCapitalized = (s: string) =>
+      !["_"].includes(s[0]) && s[0] === s[0].toUpperCase();
+    const escapeProp = (p: string) => {
+      return isCapitalized(p) || ["type", "in"].includes(p) ? `\\"${p}"` : p;
+    };
+    fs.writeFile("./generated.json", JSON.stringify(r), () => {});
+    fs.writeFileSync(
+      "../src/Generated.res",
+      Object.entries(r)
+        .map(
+          ([compName, props]) => `
+    module ${compName} = {
+      @module("native-base") @react.component
+      external make: (
+        ${props.map(
+          (p) => `
+          ~${escapeProp(p)}:'a=?    
+        `,
+        )}
+      ) => React.element = "${compName}"
+    }
+    `,
+        )
+        .join("\n"),
+    );
   }
 }
 

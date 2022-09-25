@@ -1,8 +1,8 @@
 module Binding = {
   @module("native-base") @react.component
   external make: (
-    ~\"in": boolean=?,
-    ~duration: integer=?,
+    ~\"in": bool=?,
+    ~duration: int=?,
     ~placement: [#top | #bottom | #left | #right],
   ) => React.element = "Slide"
 }

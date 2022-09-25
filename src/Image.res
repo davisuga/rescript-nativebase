@@ -1,5 +1,6 @@
 module Binding = {
   open ReactNative
+  open ReactNative.Image
   @module("native-base") @react.component
   external make: (
     //
@@ -130,9 +131,9 @@ module Binding = {
     ~accessible: bool=?,
     ~blurRadius: float=?,
     ~capInsets: View.edgeInsets=?,
-    ~defaultSource: DefaultSource.t=?,
+    ~defaultSource: ReactNative.Image.DefaultSource.t=?,
     ~fadeDuration: float=?,
-    ~loadingIndicatorSource: array<Source.t>=?,
+    ~loadingIndicatorSource: array<ReactNative.Image.Source.t>=?,
     ~onError: errorEvent => unit=?,
     ~onLayout: Event.layoutEvent => unit=?,
     ~onLoad: imageLoadEvent => unit=?,
