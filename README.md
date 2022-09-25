@@ -43,17 +43,8 @@ yarn add rescript-nativebase
 
 ## Usage
 
-### Types
-
-#### `RescriptNativeBase.t`
-
-...
-
-### Methods
-
-#### `RescriptNativeBase.method`
-
-...
+At the moment, please read the [NativeBase documentation](https://nativebase.io/).
+Most props map to float, int, or a polymorphic variant (like #xs, #lg, etc)
 
 ---
 
