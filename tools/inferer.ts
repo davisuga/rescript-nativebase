@@ -1,3 +1,4 @@
+import { ITheme } from "native-base/src";
 import * as NativeBase from "../node_modules/native-base/lib/typescript/";
 import * as NativeBaseComponentsPrimitives from "../node_modules/native-base/lib/typescript/components/primitives/";
 
@@ -20,6 +21,10 @@ const x: G = JSON.parse("");
 // x.
 
 // Radio.
+let Theme: ITheme
+// f.theme.
+f.theme.components.
+let a = 1
 
 // export const f = () => {
 //   const x: F = JSON.parse("");
