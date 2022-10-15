@@ -31,6 +31,12 @@ let a = 1
 //   x.Accordion.params0.
 //   return x;
 // };
+const useTheme = NativeBase.useTheme()
+useTheme.
+type FormControlLabelP = React.ComponentProps<typeof x.FormControl.Label>;
+let FormControlLabel: FormControlLabelP;
+FormControlLabel.
+// f.FormControl.Label.
 type AlertP = React.ComponentProps<typeof x.Alert>;
 let Alert: AlertP;
 f.Alert.
@@ -254,9 +260,9 @@ type StaggerP = React.ComponentProps<typeof x.Stagger>;
 let Stagger: StaggerP;
 f.Stagger.
 //Stagger.
-type NumberInputP = React.ComponentProps<typeof x.NumberInput>;
-let NumberInput: NumberInputP;
-f.NumberInput.
+// type NumberInputP = React.ComponentProps<typeof x.NumberInput>;
+// let NumberInput: NumberInputP;
+// f.NumberInput.
 //NumberInput.
 type NumberInputFieldP = React.ComponentProps<typeof x.NumberInputField>;
 let NumberInputField: NumberInputFieldP;
