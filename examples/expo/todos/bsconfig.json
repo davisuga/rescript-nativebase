@@ -16,8 +16,7 @@
   "bs-dependencies": [
     "@rescript/react",
     "rescript-react-native",
-    "bs-css",
-    "bs-css-emotion"
+    "rescript-nativebase"
   ],
   "ppx-flags": [],
   "reason": {
