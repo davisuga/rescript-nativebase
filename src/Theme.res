@@ -333,6 +333,7 @@ type baseStyle = {
 type componentOptions<'t> = {
   baseStyle?: {"colorMode": string} => baseStyle,
   variants?: Js.Dict.t<{"colorMode": string} => baseStyle>,
+  sizes?: Js.Dict.t<{"colorMode": string} => baseStyle>,
   defaultProps?: 't,
 }
 // TODO: Replace these JS Dicts
