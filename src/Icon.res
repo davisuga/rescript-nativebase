@@ -12,6 +12,7 @@ module MaterialCommunityIcons = {
 module Binding = {
   @module("native-base") @react.component
   external make: (
+    ~variant: string=?,
     // this 'a is a temporary type hack to make the compiler happy
     ~\"as": React.componentLike<
       {"color": string, "name": string, "size": int, "style": option<ReactNative.Style.t>},

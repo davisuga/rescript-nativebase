@@ -1,6 +1,10 @@
+external customVarint: string => [#filled | #outline | #rounded | #underlined | #unstyled] =
+  "%identity"
+
 module Binding = {
   open ReactNative
   open TextInput
+
   @module("native-base") @react.component
   external make: (
     //NativeBase input props
@@ -294,3 +298,4 @@ module Binding = {
   ) => React.element = "Checkbox"
 }
 include Binding
+let e = <Binding variant={customVarint("sas")} />

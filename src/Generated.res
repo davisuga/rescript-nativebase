@@ -1,6 +1,7 @@
 module Hidden = {
   @module("native-base") @react.component
   external make: (
+    ~variant: string=?,
     ~children: 'a=?,
     ~colorMode: 'a=?,
     ~from: 'a=?,
@@ -13,6 +14,7 @@ module Hidden = {
 module Overlay = {
   @module("native-base") @react.component
   external make: (
+    ~variant: string=?,
     ~animationPreset: 'a=?,
     ~children: 'a=?,
     ~isKeyboardDismissable: 'a=?,
@@ -28,6 +30,7 @@ module Overlay = {
 module Accordion = {
   @module("native-base") @react.component
   external make: (
+    ~variant: string=?,
     ~_android: 'a=?,
     ~_dark: 'a=?,
     ~_important: 'a=?,
@@ -118,6 +121,7 @@ module Accordion = {
 module Stagger = {
   @module("native-base") @react.component
   external make: (
+    ~variant: string=?,
     ~animate: 'a=?,
     ~children: 'a=?,
     ~exit: 'a=?,
@@ -129,6 +133,7 @@ module Stagger = {
 module List = {
   @module("native-base") @react.component
   external make: (
+    ~variant: string=?,
     ~_focus: 'a=?,
     ~_hover: 'a=?,
     ~_pressed: 'a=?,
@@ -146,6 +151,7 @@ module List = {
 module Popover = {
   @module("native-base") @react.component
   external make: (
+    ~variant: string=?,
     ~children: 'a=?,
     ~crossOffset: 'a=?,
     ~defaultIsOpen: 'a=?,
@@ -169,6 +175,7 @@ module Popover = {
 module Drawer = {
   @module("native-base") @react.component
   external make: (
+    ~variant: string=?,
     ~children: 'a=?,
     ~isOpen: 'a=?,
     ~onClose: 'a=?,

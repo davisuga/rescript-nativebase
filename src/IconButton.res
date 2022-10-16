@@ -1,3 +1,6 @@
+external customVarint: string => [#ghost | #outline | #solid | #subtle | #link | #unstyled] =
+  "%identity%"
+
 module Binding = {
   open ReactNative
 

@@ -1,3 +1,4 @@
+external customVarint: string => [#lg | #md | #sm | #xl | #"2xl" | #xs] = "%identity%"
 module Binding = {
   open ReactNative
   open ReactNative.TextInput

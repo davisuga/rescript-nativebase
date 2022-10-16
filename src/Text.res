@@ -1,6 +1,7 @@
 module Binding = {
   @module("native-base") @react.component
   external make: (
+    ~variant: string=?,
     ~isTruncated: bool=?,
     ~noOfLines: list<string>=?,
     ~sub: bool=?,

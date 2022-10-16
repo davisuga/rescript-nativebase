@@ -1,6 +1,7 @@
 module Binding = {
   @module("native-base") @react.component
   external make: (
+    ~variant: string=?,
     ~m: string=?,
     ~margin: string=?,
     ~mt: string=?,

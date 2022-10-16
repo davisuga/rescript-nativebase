@@ -3,6 +3,7 @@ module Binding = {
   open ReactNative.Image
   @module("native-base") @react.component
   external make: (
+    ~variant: string=?,
     //
     ~m: string=?,
     ~margin: string=?,
