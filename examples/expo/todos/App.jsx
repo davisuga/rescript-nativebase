@@ -10,11 +10,18 @@ const config = {
   useSystemColorMode: false,
   initialColorMode: "dark",
 };
-type Ab = { a: 1 };
 export default function App() {
-  const customTheme = NativeBase.extendTheme({ config });
-  const theme = useTheme();
-  theme;
+  var customTheme = NativeBase.extendTheme({
+    components: {
+      VStack: {
+        baseStyle: function (param) {
+          return {
+            // padding: "10",
+          };
+        },
+      },
+    },
+  });
   return (
     <NativeBaseProvider theme={customTheme}>
       <TodoList />

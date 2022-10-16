@@ -1,8 +1,8 @@
 %%raw(`//@ts-check`)
 
+open RescriptNativeBase
 open Utils
 open Types
-
 @react.component
 let make = () => {
   let (inputText, setInputValue) = React.useState(_ => "")
