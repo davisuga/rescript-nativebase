@@ -8,8 +8,8 @@
     "ios": "expo start --ios",
     "web": "expo start --web",
     "re:start": "rescript build -w",
-    "re:clean-build": "rescript clean && rescript"
-
+    "re:clean-build": "rescript clean && rescript",
+    "re:build-all":"rescript build -with-deps -w"
   },
   "dependencies": {
     "@expo/webpack-config": "^0.17.0",
@@ -22,7 +22,7 @@
     "react-native-safe-area-context": "4.3.1",
     "react-native-svg": "12.3.0",
     "react-native-web": "~0.18.7",
-    "rescript-nativebase": "^0.0.5"
+    "rescript-nativebase": "^0.0.6"
   },
   "devDependencies": {
     "@babel/core": "^7.12.9",

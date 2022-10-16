@@ -1,8 +1,8 @@
 %%raw(`//@ts-check`)
 
-open RescriptNativeBase
 open Utils
 open Types
+
 @react.component
 let make = () => {
   let (inputText, setInputValue) = React.useState(_ => "")
@@ -24,7 +24,7 @@ let make = () => {
 
   <Center flex="1" px="3" bg="gray.900">
     <Box w="80%">
-      <Heading mb="2" size=#md> {"Wednesday"->s} </Heading>
+      <Heading color="white" mb="2" size=#md> {"Wednesday"->s} </Heading>
       <VStack space=4>
         <HStack space=2>
           <Input
