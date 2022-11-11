@@ -132,7 +132,7 @@ module Binding = {
     ~accessible: bool=?,
     ~blurRadius: float=?,
     ~capInsets: View.edgeInsets=?,
-    ~defaultSource: ReactNative.Image.DefaultSource.t=?,
+    ~defaultSource: ReactNative.Image.Source.t=?,
     ~fadeDuration: float=?,
     ~loadingIndicatorSource: array<ReactNative.Image.Source.t>=?,
     ~onError: errorEvent => unit=?,
