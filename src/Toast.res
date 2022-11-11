@@ -165,7 +165,7 @@ external show: (t, showOptions) => toastRef = "show"
 
 @module("native-base") external useToast: unit => t = "useToast"
 @val external t: t = "r"
-module Toast = {
+module Actions = {
   @module("native-base") @scope("Toast")
   external show: showOptions => toastRef = "show"
 }
